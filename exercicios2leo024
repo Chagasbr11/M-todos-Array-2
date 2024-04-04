@@ -1,0 +1,61 @@
+Exercícios para filter
+// Fácil
+// 1
+let numeros = [1, 2, 3, 4, 5]
+let pares = numeros.filter(numero => numero % 2 === 0)
+console.log(pares)
+
+// 2
+let strings = ['olá', 'eu', 'sou', 'o', 'Leonardo']
+let maiorTres = strings.filter(str => {
+    return str.length > 3
+})
+console.log(maiorTres)
+
+// Intermediário
+// 1
+let objetos = [{ nome: 'Leonardo', idade: 24 }, { nome: 'Marilda' }, { nome: 'Luiz', idade: 51 }]
+let comIdade = objetos.filter(obj => obj.idade !== undefined)
+console.log(comIdade)
+
+// 2
+let multiplosDeTres = numeros.filter(numero => numero % 3 === 0)
+console.log(multiplosDeTres)
+
+// Difícil
+// 1
+let matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+let somaMaiorDez = matriz.filter(linha => linha.reduce((a, b) => a + b, 0) > 10)
+console.log(somaMaiorDez)
+
+// 2
+let comMaiuscula = strings.filter(str => str[0] === str[0].toUpperCase())
+console.log(comMaiuscula)
+
+// Exercícios para reduce
+// Fácil
+// 1
+let soma = numeros.reduce((a, b) => a + b, 0)
+console.log(soma)
+
+// 2
+let concatenado = strings.reduce((a, b) => a + ' ' + b)
+console.log(concatenado)
+
+// Intermediário
+// 1
+let somaIdades = comIdade.reduce((a, b) => a + b.idade, 0)
+console.log(somaIdades)
+
+// 2
+let produto = numeros.reduce((a, b) => a * b, 1)
+console.log(produto)
+
+// Difícil
+// 1
+let somaTotal = matriz.reduce((a, b) => a + b.reduce((c, d) => c + d, 0), 0)
+console.log(somaTotal)
+
+// 2
+let maior = numeros.reduce((a, b) => Math.max(a, b))
+console.log(maior)
